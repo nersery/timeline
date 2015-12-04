@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'wall/write' => 'wall#write'
 
-  get 'wall/posts' => 'wall#posts'
+  post 'wall/posts' => 'wall#posts'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
