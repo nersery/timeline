@@ -1,0 +1,21 @@
+<h4><%= flash[:alert] %></h4>
+
+<div>
+  <h1>Edit Post</h1>
+  <form action="/wall/edit_complete" method="post">
+    <p>
+      <input type="hidden" name="id" value="<%= @post_edit.id %>">
+    </p>
+    <p>
+      <label>Name : </label>
+      <input type="text" name="writer_edit" value="<%= @post_edit.name %>">
+    </p>
+    <p>
+      <label>Content : </label>
+      <textarea name="content_edit" cols="40" rows="5"><%= @post_edit.content %></textarea>
+    </p>
+    <p>
+      <input type="submit" value="edit">
+    </p>
+  </form>
+</div>
