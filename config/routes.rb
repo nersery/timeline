@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #controller user
+  get 'user/signup'
+
+  #controller post
   get 'wall/write'
   post 'wall/write_complete' => 'wall#write_complete'
   get 'wall/posts'
