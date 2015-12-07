@@ -24,7 +24,7 @@ class UserController < ApplicationController
   end
 
   def login_complete
-    u = User.where(username: params[username])[0]
+    u = User.where(username: params[:username])[0]
     if u.nil?
       flash[:alert] = "Incorrect username or password."
       redirect_to :back
